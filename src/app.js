@@ -38,6 +38,10 @@ try {
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(logger("common"));
 
+  app.get("/", (req,res)=> {
+    res.send("<h1> Hello World App Works!!</h1>")
+  })
+
   app.use("/auth", authRoutes);
 
   /* ''''''' Start server ''''''''' */
